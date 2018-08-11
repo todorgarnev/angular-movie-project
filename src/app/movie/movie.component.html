@@ -1,7 +1,12 @@
 <div>
   <img src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="{{ movie.poster_path }}" class="thumbnail">
+
   <h4>{{ movie.title }}</h4>
+
   <p>{{ movie.release_date }}</p>
+
+  <p>Rating: {{ movie.vote_average }}</p>
+
   <p>
     <a href="#" class="btn btn-default">View Details</a>
   </p>

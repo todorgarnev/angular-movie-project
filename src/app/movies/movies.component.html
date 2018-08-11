@@ -2,6 +2,7 @@
   <div class="panel-heading">
     <h3 class="panel-title">Popular Movies</h3>
   </div>
+
   <div class="panel-body">
     <div *ngIf="popular" class="row">
       <div *ngFor="let movie of popular; let i=index" class="col-md-2">
@@ -15,9 +16,38 @@
   <div class="panel-heading">
     <h3 class="panel-title">In Theatres</h3>
   </div>
+
   <div class="panel-body">
     <div *ngIf="theatres" class="row">
       <div *ngFor="let movie of theatres; let i=index" class="col-md-2">
+        <app-movie *ngIf="i < 6" [movie]="movie"></app-movie>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Kids Movies</h3>
+  </div>
+
+  <div class="panel-body">
+    <div *ngIf="theatres" class="row">
+      <div *ngFor="let movie of kids; let i=index" class="col-md-2">
+        <app-movie *ngIf="i < 6" [movie]="movie"></app-movie>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Drama Movies</h3>
+  </div>
+
+  <div class="panel-body">
+    <div *ngIf="theatres" class="row">
+      <div *ngFor="let movie of drama; let i=index" class="col-md-2">
         <app-movie *ngIf="i < 6" [movie]="movie"></app-movie>
       </div>
     </div>
