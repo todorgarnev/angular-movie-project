@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Popular Movies</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div *ngFor="let movie of popular.results; let i=index" class="col-md-2">
+        <div *ngIf="i < 6">
+          <img src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="{{ movie.poster_path }}" class="thumbnail">
+          <h4>{{ movie.title }}</h4>
+          <p>{{ movie.release_date }}</p>
+          <p>
+            <a href="#" class="btn btn-default">View Details</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">In Theatres</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div *ngFor="let movie of theatres.results; let i=index" class="col-md-2">
+        <div *ngIf="i < 6">
+          <img src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="{{ movie.poster_path }}" class="thumbnail">
+          <h4>{{ movie.title }}</h4>
+          <p>{{ movie.release_date}}</p>
+          <p>
+            <a href="#" class="btn btn-default">View Details</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
