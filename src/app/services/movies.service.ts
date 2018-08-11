@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from '../../../node_modules/rxjs';
+import { Movies } from '../models/movies';
 
 const apiKey = '782e779226153bf82c7ff0b9345fc3c2';
 
@@ -15,11 +16,11 @@ export class MoviesService {
 
   constructor(private http: HttpClient) { }
 
-  getPopular(): Observable<Object> {
-    return this.http.get(`${this.path}${this.popular}${this.authentication}${apiKey}`);
+  getPopular(): Observable<Movies> {
+    return this.http.get<Movies>(`${this.path}${this.popular}${this.authentication}${apiKey}`);
   }
 
-  getTheatres(): Observable<Object> {
-    return this.http.get(`${this.path}${this.theatres}${this.authentication}${apiKey}`);
+  getTheatres(): Observable<Movies> {
+    return this.http.get<Movies>(`${this.path}${this.theatres}${this.authentication}${apiKey}`);
   }
 }
