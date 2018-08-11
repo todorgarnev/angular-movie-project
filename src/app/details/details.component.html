@@ -12,13 +12,19 @@
 
         <div class="col-md-7">
           <ul class="list-group">
-            <li class="list-group-item">Genres:
+            <li class="list-group-item">
+              <span class="font-weight-bold text-danger">Genres: </span>
               <span *ngFor="let genre of myMovie.genres">{{ genre.name }}; </span>
             </li>
 
-            <li class="list-group-item">Release Date: {{ myMovie.release_date }}</li>
+            <li class="list-group-item">
+              <span class="font-weight-bold text-danger">Release Date:</span> {{ myMovie.release_date }}</li>
 
-            <li class="list-group-item">Rating: {{ myMovie.vote_average }}</li>
+            <li class="list-group-item">
+              <span class="font-weight-bold text-danger">Rating:</span> {{ myMovie.vote_average }}</li>
+
+            <li class="list-group-item">
+              <span class="font-weight-bold text-danger">Details:</span> {{ myMovie.overview }}</li>
           </ul>
 
           <br>
